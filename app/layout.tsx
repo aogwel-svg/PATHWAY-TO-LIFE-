@@ -1,40 +1,28 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
+import HeroSection from "@/components/hero-section"
+import SermonSection from "@/components/sermon-section"
+import RecentSermons from "@/components/recent-sermons"
+import VisitSection from "@/components/visit-section"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-export const metadata: Metadata = {
-  title: "Pathway To Life Church",
-  description:
-    "A digital ministry platform for worship, sermons, and spiritual growth.",
-  manifest: "/manifest.json",
-}
-
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#facc15",
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
+    <main className="flex flex-col w-full">
+      {/* HERO */}
+      <HeroSection />
+
+      {/* SERMON HIGHLIGHT / FEATURE */}
+      <section className="w-full">
+        <SermonSection />
+      </section>
+
+      {/* RECENT SERMONS */}
+      <section className="w-full">
+        <RecentSermons />
+      </section>
+
+      {/* VISIT / CALL TO ACTION */}
+      <section className="w-full">
+        <VisitSection />
+      </section>
+    </main>
   )
 }
