@@ -1,18 +1,15 @@
 "use client"
 
 import { useEffect } from "react"
-import { useRouter } from "next/navigation"
 
 export default function OfflineDetector() {
-  const router = useRouter()
-
   useEffect(() => {
-    const goOffline = () => router.push("/offline")
-
-    const handleOffline = () => goOffline()
+    const handleOffline = () => {
+      console.log("User offline")
+    }
 
     const handleOnline = () => {
-      router.push("/")
+      console.log("User online")
     }
 
     window.addEventListener("offline", handleOffline)
@@ -22,7 +19,7 @@ export default function OfflineDetector() {
       window.removeEventListener("offline", handleOffline)
       window.removeEventListener("online", handleOnline)
     }
-  }, [router])
+  }, [])
 
   return null
 }

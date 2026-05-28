@@ -1,4 +1,4 @@
-export default function OfflinePage() {
+export default function Page() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-6 text-center">
       <div className="max-w-md">
