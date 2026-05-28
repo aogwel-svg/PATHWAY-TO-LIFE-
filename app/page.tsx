@@ -1,7 +1,9 @@
+import HeroSection from "@/components/hero-section"
+
 export default function Page() {
   return (
-    <div style={{ padding: 40 }}>
-      VERCEL WORKING
-    </div>
+    <main>
+      <HeroSection />
+    </main>
   )
 }
