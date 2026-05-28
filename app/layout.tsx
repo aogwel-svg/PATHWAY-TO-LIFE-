@@ -18,11 +18,12 @@ export const metadata: Metadata = {
   description:
     "A digital ministry platform for worship, sermons, and spiritual growth.",
   manifest: "/manifest.json",
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#facc15",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
 }
 
 export default function RootLayout({
@@ -33,10 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* 🌐 Offline detection system */}
         <OfflineDetector />
-
-        {/* 📦 App content */}
         {children}
       </body>
     </html>
