@@ -77,13 +77,13 @@ export default function SermonSection() {
             </a>
 
             <a
-              href={sermon.notesUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${cormorant.className} px-6 py-3 rounded-full border border-black text-black hover:bg-black hover:text-white transition text-center`}
-            >
-              DOWNLOAD NOTES
-            </a>
+  href="https://drive.google.com/uc?export=download&id=12n-W-pK3rBoYLrhAfbRXgef1hKRVuNgC"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white text-sm font-medium shadow-lg hover:scale-105 transition-all duration-300"
+>
+  📄 DOWNLOAD SERMON NOTES
+</a>
 
           </div>
 
