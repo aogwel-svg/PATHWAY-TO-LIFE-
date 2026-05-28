@@ -3,10 +3,12 @@ import RecentSermons from "@/components/recent-sermons"
 import SermonSection from "@/components/sermon-section"
 import VisitSection from "@/components/visit-section"
 import AppSection from "@/components/app-section"
+import Footer from "@/components/footer"
 
 export default function Page() {
   return (
     <main className="flex flex-col">
+      
       <div className="min-h-screen">
         <HeroSection />
       </div>
@@ -26,6 +28,9 @@ export default function Page() {
       <div className="py-10 md:py-20">
         <VisitSection />
       </div>
+
+      <Footer />
+
     </main>
   )
 }
