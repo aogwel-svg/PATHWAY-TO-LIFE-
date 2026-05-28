@@ -1,28 +1,18 @@
-import HeroSection from "@/components/hero-section"
-import SermonSection from "@/components/sermon-section"
-import RecentSermons from "@/components/recent-sermons"
-import VisitSection from "@/components/visit-section"
+import "./globals.css"
 
-export default function Home() {
+export const metadata = {
+  title: "Church App",
+  description: "Church Landing Page",
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <main className="flex flex-col w-full">
-      {/* HERO */}
-      <HeroSection />
-
-      {/* SERMON HIGHLIGHT / FEATURE */}
-      <section className="w-full">
-        <SermonSection />
-      </section>
-
-      {/* RECENT SERMONS */}
-      <section className="w-full">
-        <RecentSermons />
-      </section>
-
-      {/* VISIT / CALL TO ACTION */}
-      <section className="w-full">
-        <VisitSection />
-      </section>
-    </main>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   )
 }
